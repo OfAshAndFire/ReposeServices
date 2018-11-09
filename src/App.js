@@ -1,26 +1,63 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Container, Header, Segment } from 'semantic-ui-react';
 import './App.css';
+let backimage = require('../../repose/src/Assets/back_image.jpeg');
+
+const square = { width: 150, height: 150 };
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+      <Container
+        fluid
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100vh',
+          overflowY: 'hidden',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) ), url("${backimage}")`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          paddingTop: '60px',
+          paddingBottom: '60px'
+        }}
+      >
+        <Container
+          fluid
+          style={{
+            display: 'flex',
+            flex: 1,
+            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center'
+          }}
+        >
+          <Header as="h2">Repose Services</Header>
+          <Container
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              textAlign: 'center',
+              paddingTop: '20px'
+            }}
           >
-            Learn React
-          </a>
-        </header>
-      </div>
+            <Segment circular style={square}>
+              <Header as="h4">
+                Find Services
+                <Header.Subheader>Locally or Remote!</Header.Subheader>
+              </Header>
+            </Segment>
+            <Segment circular inverted style={square}>
+              <Header as="h4" inverted>
+                Find Resources
+                <Header.Subheader>When you need them!</Header.Subheader>
+              </Header>
+            </Segment>
+          </Container>
+        </Container>
+      </Container>
     );
   }
 }
