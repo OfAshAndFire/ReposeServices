@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import './App.css';
-let backimage = require('../../repose/src/Assets/back_image.jpeg');
+let backimage = require('./Assets/back_image.jpeg');
 
 const square = { width: 150, height: 150 };
 
