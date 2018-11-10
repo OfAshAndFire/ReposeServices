@@ -19,3 +19,15 @@ h2.ui.header {
   padding-top: 5%;
   margin: 0;
 }
+
+@media screen and (max-width: 720) {
+  .ui.circular.segment {
+    display: table-cell;
+    padding: 2rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 500em;
+    padding-top: 16%;
+    margin: 0;
+  }
+}
